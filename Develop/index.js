@@ -1,62 +1,78 @@
 // TODO: Include packages needed for this application
 
-const { default: inquirer } = require("inquirer");
-
+const inquirer = require("inquirer");
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
+const path = require("path");
+console.log("readme is running")
 // TODO: Create an array of questions for user input
 const questions = [{
     type: "input",
-    message: "What is the Title of the project?",
-    name: "Title"
-    
+    name: "title",
+    message: "What is the Title of the project?",   
 },{
     type: "input",
-    message: "What is the project about? Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide: 1. What was your motivation? 2. Why did you bild this project? 3. What problem does it solve? 4. What did you learn?",
-    name: "Description"
+    name: "Description",
+    message: "What does the project do?",
 },{
     type: "input",
-    message: "If your README is long, add a table of contents to make it easy for users to find what they need.",
-    name: "Table of Contents(Optional)"
+    name: "Installation",
+    message: "What programs or installation was needed?",
 },{
     type: "input",
-    message: "What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.",
-    name: "Installation"
+    name: "Usage",
+    message: "How do you use this app, example?",
 },{
     type: "input",
-    message: "Provide instructions and examples for use. Include screenshots as needed. To add a screenshot, create an 'assests/images' folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using ![alt text](assets/images/screenshot.png)",
-    name: "Usage"
+    name: "Contributing",
+    message: "List your collaborators",
+},{
+    type: "list",
+    name: "license",
+    message: "Select a license to use?",
+    choices: ["None", "Apache2.0", "GNUv3.0", "MIT"],
+    validate: licenseSelect = () => {
+        if (licenseSelect = true) {
+            return true;
+        } else {
+            console.log('Select one license or none')
+            return false;
+        }
+    }
 },{
     type: "input",
-    message: "List your collaborators, if any, with links to their GitHub profiles. If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. If you followed tutorials, include links to those here as well.",
-    name: "Credits"
+    name: "Tests",
+    message: "Please enter test instructions.",
 },{
     type: "input",
-    message: "Choose a license, If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/). Choices:['MIT', 'IASC']", 
-    name: "Licenses"
+    name: "Email",
+    message: "What is your Email?",
 },{
     type: "input",
-    message: "List badges(optional), refer to![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)",
-    name: "Badges"
-},{
-    type: "input",
-    message: "If your project has a lot of features, list them here.",
-    name: "Features"
-},{
-    type: "input",
-    message: "If your want to contribute please contact me via",
-    name: "Contribute"
-},{
-    type: "input",
-    message: "List tests for your application and provide examples how to turn them here.",
-    name: "Tests"
+    name: "GitHub",
+    message: "What is your GitHub Name?",
 }];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {
-    inquirer.prompt(questions)
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("You can view your ReadMe now!")
+    })
 }
 
-// Function call to initialize app
+// TODO: Create a function to initialize app
+
+function init() {
+   inquirer.prompt(questions)
+    .then((userInput)=> {
+        console.log(userInput)
+        writeToFile("./README.md", generateMarkdown(userInput)); 
+    })
+
+}
+
+//Function call to initialize app
 init();

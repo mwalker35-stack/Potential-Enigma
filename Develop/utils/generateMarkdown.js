@@ -2,52 +2,48 @@
 
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license === license) {
-    console.log(renderLicenseBadge)
+  if (license !== "None") {
+    return `![Github license](https://img.shields.io/badge/license-${license}-green.svg)`;
   }
-  else  {
-    console.log(" ")
-  }
+  return "";
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === license) {
-    console.log(renderLicenseLink)
-  }
-  else  {
-    console.log(" ")
-  }
+  let licenseLink = `https://img.shields.io/badge/license-${license}-green`
+  return licenseLink
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license === license) {
-    console.log("License")
-    return License
+  if (license !== "none") {
+    return ` ## License
+    ${license}
+    `
   }
-  else  {
-    console.log(" ")
-  }
+  return "";
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  
-  ## Table of Contents(Optional):
-  -[Description](#Description)
-  -[Installation](#Installation)
-  -[Usage](#Usage)
-  -[Licenses](#Licenses)
-  -[Credits](#Credits)
-  -[License](#License)
-  -[Badges](#Badges)
-  -[Features](#Features)
-  -[How to Contribute](#Contribute)
-  -[Tests](#Tests)
+  ${renderLicenseBadge(data.license)}
+  ## Table of Contents:
+  *[Description](#Description)
+
+  *[Installation](#Installation)
+
+  *[Usage](#Usage)
+
+  *[License](#License)
+
+  *[Contributing](#Contributing)
+
+  *[Tests](#Tests)
+
+  *[Questions](#Questions)
 
   ## Description: 
   ${data.Description} 
@@ -58,25 +54,17 @@ function generateMarkdown(data) {
   ## Usage:
   ${data.Usage}
 
-  ## Credits:
-  ${data.Credits}
-
   ## License:
-  ${data.License}
+  ![badge](https://img.shields.io/badge/license-${data.license}-green)
+  <br />
+  This application is covered by the ${data.license} license. 
 
-  ## Badges:
-  ${data.Badges}
+  ## Contributing:
+  ${data.Contributing}
 
-  ## Features:
-  ${data.Features}
-
-  ## How to Contribute:
-  ${data.Contribute}
-
-  ## Tests:
-  ${data.Tests}
-
-
+  ## Questions:
+  If you have questions please Email: ${data.Email}<br />
+  See: GitHub:  (https://github.com/${data.GitHub})
 `;
 }
 
