@@ -1,4 +1,4 @@
-# README GENERATOR
+# ReadMe Generator
   ![Github license](https://img.shields.io/badge/license-MIT-green.svg)
   ## Table of Contents:
   *[Description](#Description)
@@ -16,13 +16,13 @@
   *[Questions](#Questions)
 
   ## Description: 
-  create professional readme file 
+  Create a professional readme 
 
   ## Installation:
-  inquierer
+  inquirer
 
   ## Usage:
-  with node index.js
+  in the terminal
 
   ## License:
   ![badge](https://img.shields.io/badge/license-MIT-green)
@@ -30,8 +30,16 @@
   This application is covered by the MIT license. 
 
   ## Contributing:
-  none
+  N/a
 
   ## Questions:
   If you have questions please Email: mwalke35@yahoo.com<br />
   See: GitHub:  (https://github.com/mwalker35-stack)
+
+  ## Video: 
+  https://watch.screencastify.com/v/EvHcPotvBZbosFqkqCuF
+
+  ## GitHub Link:
+  https://github.com/mwalker35-stack/Potential-Enigma/tree/main/Develop#Contributing
+
+  ![alt text](assets\Screenshot 2023-01-07 10.17.19.jpeg)
