@@ -42,4 +42,4 @@
   ## GitHub Link:
   https://github.com/mwalker35-stack/Potential-Enigma/tree/main/Develop#Contributing
 
-  ![alt text](assets\Screenshot 2023-01-07 10.17.19.jpeg)
+  ![alt text](assets\Screenshot.jpeg)
