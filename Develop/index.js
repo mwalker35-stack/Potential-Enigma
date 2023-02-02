@@ -27,6 +27,10 @@ const questions = [{
     name: "Contributing",
     message: "List your collaborators",
 },{
+    type: "input",
+    name: "Tests",
+    message: "How do you run test?"
+},{
     type: "list",
     name: "license",
     message: "Select a license to use?",

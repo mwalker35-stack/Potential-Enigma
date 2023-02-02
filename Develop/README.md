@@ -1,4 +1,4 @@
-# ReadMe Generator
+# Password Generator
   ![Github license](https://img.shields.io/badge/license-MIT-green.svg)
   ## Table of Contents:
   *[Description](#Description)
@@ -16,13 +16,13 @@
   *[Questions](#Questions)
 
   ## Description: 
-  Create a professional readme 
+  creates a unique password based on selection user chooses. 
 
   ## Installation:
-  inquirer
+  none
 
   ## Usage:
-  in the terminal
+  in the browswer so users can create passwords quickly and unique given the characters they want to use.
 
   ## License:
   ![badge](https://img.shields.io/badge/license-MIT-green)
@@ -30,16 +30,9 @@
   This application is covered by the MIT license. 
 
   ## Contributing:
-  N/a
+  none
 
   ## Questions:
   If you have questions please Email: mwalke35@yahoo.com<br />
   See: GitHub:  (https://github.com/mwalker35-stack)
-
-  ## Video: 
-  https://watch.screencastify.com/v/EvHcPotvBZbosFqkqCuF
-
-  ## GitHub Link:
-  https://github.com/mwalker35-stack/Potential-Enigma/tree/main/Develop#Contributing
-
-  ![alt text](./utils/assets/Screenshot.jpeg)
+a
